@@ -1,8 +1,11 @@
 {
   "name": "pi-ancestor-resources",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Expose ancestor .agents/skills directories to Pi across git repository boundaries.",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "keywords": [
     "pi-package",
     "pi-extension",
@@ -18,16 +21,26 @@
     "url": "https://github.com/patlux/pi-ancestor-resources/issues"
   },
   "files": [
-    "index.ts",
+    "src",
     "README.md",
     "LICENSE"
   ],
+  "scripts": {
+    "test": "node --experimental-strip-types --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "ci": "npm run typecheck && npm test && npm pack --dry-run"
+  },
   "pi": {
     "extensions": [
-      "./index.ts"
+      "./src/index.ts"
     ]
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.78.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
   }
 }

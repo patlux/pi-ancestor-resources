@@ -1,0 +1,33 @@
+{
+  "name": "pi-ancestor-resources",
+  "version": "0.1.0",
+  "description": "Expose ancestor .agents/skills directories to Pi across git repository boundaries.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patlux/pi-ancestor-resources.git"
+  },
+  "homepage": "https://github.com/patlux/pi-ancestor-resources#readme",
+  "bugs": {
+    "url": "https://github.com/patlux/pi-ancestor-resources/issues"
+  },
+  "files": [
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

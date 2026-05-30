@@ -65,7 +65,7 @@ Without this extension, Pi stops at `project-a`. With this extension, Pi can sti
 
 ```sh
 npm ci
-npm run ci
+npm run check
 ```
 
 The package uses TypeScript source directly. Pi loads `.ts` extensions without a build step.

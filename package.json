@@ -1,6 +1,6 @@
 {
   "name": "pi-ancestor-resources",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Expose ancestor .agents/skills directories to Pi across git repository boundaries.",
   "type": "module",
   "exports": {
@@ -28,7 +28,7 @@
   "scripts": {
     "test": "node --experimental-strip-types --test \"test/**/*.test.ts\"",
     "typecheck": "tsc --noEmit",
-    "ci": "npm run typecheck && npm test && npm pack --dry-run"
+    "check": "npm run typecheck && npm test && npm pack --dry-run"
   },
   "pi": {
     "extensions": [
